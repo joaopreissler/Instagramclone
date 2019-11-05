@@ -14,9 +14,10 @@
         <div class="form-group row">
           <label for="caption" class="col-md-4 col-form-label ">Post Caption</label>
 
-              <input id="caption" type="text"
+              <input id="caption"
+              type="text"
               class="form-control @error('caption') is-invalid @enderror"
-               value="{{ old('caption') }}"name="caption" required autocomplete="caption" autofocus>
+               value="{{ old('caption') }}" name="caption" required autocomplete="caption" autofocus>
                 @error('caption')
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
