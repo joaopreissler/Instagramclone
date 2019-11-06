@@ -5,10 +5,14 @@
 <div class="container">
     <div class="row">
         <div class="col-3 pd-5">
-            <img src="\svg\myphoto.jpg" class="rounded-circle" alt="">
+            <img src="{{$user->profile->profileImage()}}" class="rounded-circle w-100" alt="">
         </div>
 <div class="col-9 pt-5">
-  <div class="d-flex justify-content-between align-items-baseline"><h1>{{$user->username}}</h1>
+  <div class="d-flex justify-content-between align-items-baseline">
+   <div class="d-flex align-items-center pb-4">
+     <h1>{{$user->username}}</h1>
+<follow-button></follow-button>
+   </div>
     @can('update',$user->profile)
       <a href="/p/create">Add new post</a>
       @endcan
